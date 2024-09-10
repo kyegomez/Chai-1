@@ -13,7 +13,7 @@ class ChaiOne(nn.Module):
         msa_depth: int = 4,
         dim_msa: int = 64,
         dim_msa_input: Optional[int] = None,
-        dim_additional_msa_feats: int = 2,
+        dim_additional_msa_feats: int = 0,
         outer_product_mean_dim_hidden: int = 32,
         msa_pwa_dropout_row_prob: float = 0.15,
         msa_pwa_heads: int = 8,
@@ -88,5 +88,7 @@ class ChaiOne(nn.Module):
                 pairwise_repr=msa_feats,
                 attn_bias=attn_bias,
             )
+            
+        logger.info(f"MSA feats shape: {msa_feats.shape}")
 
         return msa_feats
