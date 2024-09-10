@@ -9,7 +9,7 @@ dim_pairwise = 128
 dim_msa = 128
 dim_msa_input = 134  # Adjusted to match the expected input dimension
 dim_additional_msa_feats = 2
-window_size = None
+window_size = 25
 
 # Initialize the model
 logger.info("Initializing ChaiOne model")

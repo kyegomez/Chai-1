@@ -88,7 +88,7 @@ class ChaiOne(nn.Module):
                 pairwise_repr=msa_feats,
                 attn_bias=attn_bias,
             )
-            
+
         logger.info(f"MSA feats shape: {msa_feats.shape}")
 
         return msa_feats
